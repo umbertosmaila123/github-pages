@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VIBRAE - Guest List</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+    header {
+      text-align: center;
+    }
+    .logo {
+      max-width: 250px;
+      margin-bottom: 1rem;
+    }
+    .icon {
+      max-width: 120px;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    form {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    button {
+      background-color: black;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+    button:hover {
+      background-color: #333;
+    }
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="VABRAE%20(47).png" alt="Logo Vibrae" class="logo" />
+    <img src="VABRAE%20(48).png" alt="Icona Vibrae" class="icon" />
+    <h1>VIBRAE - On The Beach</h1>
+    <p>Registrati per l’evento del 01.06.25</p>
+  </header>
+
+  <form name="guestlist" method="POST" data-netlify="true">
+    <input type="text" name="nome" placeholder="Nome" required />
+    <input type="text" name="cognome" placeholder="Cognome" required />
+    <input type="number" name="partecipanti" placeholder="Numero di partecipanti" required min="1" max="10" />
+    <input type="text" name="instagram" placeholder="Profilo Instagram" required />
+    <input type="tel" name="telefono" placeholder="Numero di telefono" required />
+    <textarea name="note" placeholder="Note extra (facoltative)"></textarea>
+    <button type="submit">Invia Richiesta</button>
+  </form>
+
+  <div class="footer">Posti limitati a 300 partecipanti</div>
+</body>
+</html>
